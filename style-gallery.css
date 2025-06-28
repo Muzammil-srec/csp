@@ -1,0 +1,172 @@
+/* === Lightning Theme Gallery Page with Hover Effect === */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0a0a0a;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.95);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffd700;
+  font-family: 'Oxanium', cursive;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:hover {
+  border-bottom: 2px solid #ffd700;
+  color: #ffd700;
+}
+
+.gallery-hero {
+  padding-top: 8rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #000 40%, #1a1a1a 100%);
+  padding-bottom: 2rem;
+}
+
+.gallery-hero h1 {
+  font-size: 3rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+.gallery-hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+/* === PHOTO CARD STYLES + LIGHTNING ANIMATION === */
+.photo-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 280px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.photo-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url('https://i.imgur.com/JnVO5Yy.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.photo-card:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 10px #ffd700,
+    0 0 20px #ffe066,
+    0 0 40px #fff176;
+  animation: lightningPulse 0.3s ease-in-out;
+}
+
+.photo-card:hover::after {
+  opacity: 0.15;
+  animation: flicker 0.3s linear infinite;
+}
+
+@keyframes lightningPulse {
+  0% {
+    box-shadow: 0 0 0px transparent;
+  }
+  50% {
+    box-shadow: 0 0 30px #ffd700;
+  }
+  100% {
+    box-shadow: 0 0 10px #fff176;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+}
+
+.photo-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  z-index: 1;
+  position: relative;
+}
+
+.caption {
+  padding: 0.75rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #111;
+  color: #aaa;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .gallery-hero h1 {
+    font-size: 2rem;
+  }
+  .photo-card {
+    max-width: 90%;
+  }
+}

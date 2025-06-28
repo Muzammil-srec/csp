@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #0f0f0f, #1a1a1a);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #111, #222);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ff007f;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff007f;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #ff007f;
+}
+
+/* Hero Section */
+.team-hero {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  background: url("https://wallpaperaccess.com/full/3913904.gif") center/cover no-repeat;
+  backdrop-filter: blur(2px);
+  color: #fff;
+}
+
+.team-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px #ff007f;
+}
+
+.team-hero p {
+  font-size: 1.2rem;
+  color: #ffb0dc;
+}
+
+/* Team Section */
+.page-content {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.team-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual Card */
+.team-card {
+  background: #1a1a1a;
+  border: 2px solid #ff007f;
+  border-radius: 12px;
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 260px;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+}
+
+.team-card:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 30px rgba(255, 0, 127, 0.6);
+}
+
+.team-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 3px solid #ff007f;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+}
+
+.team-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #999;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}

@@ -1,0 +1,78 @@
+/* Water Breathing Ripple Background */
+.ripple {
+  background: url('https://i.imgur.com/lX0jSEW.gif') center/cover no-repeat;
+  animation: floatUp 10s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+/* Floating Water Effect */
+@keyframes floatUp {
+  0% { background-position-y: 0; }
+  100% { background-position-y: -80px; }
+}
+
+/* Typing cursor */
+.blinking-cursor {
+  animation: blink 1s infinite;
+  color: cyan;
+  font-weight: bold;
+}
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Form glass effect */
+.contact-form {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Input & Textarea styling */
+.contact-form input,
+.contact-form textarea {
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: cyan;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+/* Success Popup */
+#successPopup {
+  animation: fadeSlide 0.6s ease;
+}
+@keyframes fadeSlide {
+  0% {
+    transform: translate(-50%, -60%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/* Chatbot floating */
+#chatBox {
+  animation: fadeUp 0.4s ease;
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

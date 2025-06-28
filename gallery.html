@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | CSP Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style-gallery.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="gallery-page">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">CSP Project</div>
+    <ul class="nav-menu">
+      <li><a href="splash.html"></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Heading -->
+  <section class="gallery-hero">
+    <h1 data-aos="fade-down">Project Photo Gallery ⚡</h1>
+    <p data-aos="fade-up" data-aos-delay="200">A Glimpse Into Our Journey</p>
+  </section>
+
+  <!-- Photo Grid -->
+  <main class="gallery-container">
+    <!-- Removed img1.jpg as requested -->
+    
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="images/img2.jpg" alt="Storage Tank" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img3.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img4.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img5.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img6.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img7.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img8.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img9.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img10.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img11.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img12.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img13.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img14.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img15.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img16.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img17.jpg" alt="Water Testing" />
+    </div>
+    <div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/img18.jpg" alt="Water Testing" />
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 CSP Team | All rights reserved</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      const flash = document.createElement("div");
+      flash.style.position = "fixed";
+      flash.style.top = 0;
+      flash.style.left = 0;
+      flash.style.width = "100%";
+      flash.style.height = "100%";
+      flash.style.background = "white";
+      flash.style.opacity = "0.9";
+      flash.style.zIndex = "9999";
+      flash.style.pointerEvents = "none";
+      document.body.appendChild(flash);
+
+      setTimeout(() => flash.style.transition = "opacity 0.3s ease");
+      setTimeout(() => flash.style.opacity = "0", 100);
+      setTimeout(() => flash.remove(), 800);
+      AOS.init();
+    });
+  </script>
+
+</body>
+</html>

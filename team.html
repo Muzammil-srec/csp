@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team | CSP Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style-team.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="team-page">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">CSP Project</div>
+    <ul class="nav-menu">
+      <li><a href="splash.html"></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="team.html" class="active">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="team-hero">
+    <h1 data-aos="fade-down">Meet Our Team 🎧</h1>
+    <p data-aos="fade-up" data-aos-delay="200">The Heroes Behind Our CSP Project</p>
+  </section>
+
+  <!-- Team Cards -->
+  <main class="page-content">
+    <div class="team-grid">
+      <div class="team-card" data-aos="flip-left">
+        <img src="images/muzammil.jpg" alt="Muzammil" class="team-img" />
+        <h3>K.S. Md. Muzammil</h3>
+        <p>Documentation & Web Developer</p>
+      </div>
+
+      <div class="team-card" data-aos="flip-left" data-aos-delay="100">
+        <img src="images/mahindra.jpg" alt="Murali Mohan" class="team-img" />
+        <h3>M. Murali Mohan</h3>
+        <p>Field Work & Photography</p>
+      </div>
+
+      <div class="team-card" data-aos="flip-left" data-aos-delay="200">
+        <img src="images/murali.jpg" alt="Mahindra" class="team-img" />
+        <h3>K. Mahindra</h3>
+        <p>Data Collection & Coordination</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 CSP Team | All rights reserved</p>
+  </footer>
+
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
